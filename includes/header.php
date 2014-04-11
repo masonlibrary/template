@@ -13,9 +13,9 @@
 	$jsOutput = '';
 ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html lang="en">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset="utf-8">
 
 		<?php echo '<title>' . $page_title . ' - ' . $site_title . '</title>'; ?>
 		<link rel="icon" type="image/png" href="images/favicon.png" />
@@ -23,10 +23,10 @@
 		<!--<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />-->
 		<!--<link rel="stylesheet" type="text/css" href="css/dataTables.css" />-->
 		<!--<link rel="stylesheet" type="text/css" href="css/TableTools.css" />-->
-		<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/css/jquery-ui.min.css" />
-		<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/css/jquery.dataTables.min.css" />
-		<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/datatables-tabletools/2.1.5/css/TableTools.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/css/jquery-ui.min.css" />
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/css/jquery.dataTables.min.css" />
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/datatables-tabletools/2.1.5/css/TableTools.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
 		<header>
