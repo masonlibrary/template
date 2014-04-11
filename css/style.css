@@ -1,0 +1,52 @@
+* {
+	margin: 0;
+	padding: 0;
+	line-height: 1.4;
+	/*font-style: normal*/
+	font-weight: normal;
+	overflow: auto;
+}
+
+html {
+	background-color: #ccc;
+}
+
+body {
+	background-color: #fff;
+	font: normal 100% Helvetica, Arial, sans-serif;
+	width: 65%;
+	min-width: 960px;
+	margin: 0px auto;
+	padding: 10px 15px;
+}
+
+header {
+
+}
+
+footer {
+	text-align: right;
+	color: #888;
+}
+
+a {
+	text-decoration: none;
+	color: #479;
+}
+
+a:hover, a img:hover {
+	opacity: 0.66;
+}
+
+strong {
+	font-weight: bold;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+	text-align: right;
+}
