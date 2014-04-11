@@ -39,23 +39,26 @@
 			</div>
 			<div class="right">
 				<h3 id="title"><?php echo $page_title; ?></h3>
-				<div id="loginLine" class="login">You are logged in as <strong><?php echo $_SESSION['userName']; ?></strong></div>
-				<div id="userlinks"><a href="userEdit.php">Account</a> &bull; <a href="logout.php">Logout</a></div>
-				<!--<br />-->
-			</div><!-- loginDiv -->
+				<?php
+					if($site_uses_auth) {
+						echo '<div>You are logged in as <strong>'.$_SESSION['userName'].'</strong>.</div>';
+						echo '<div><a href="userEdit.php">Account</a> &bull; <a href="logout.php">Logout</a></div>';
+					}
+				?>
+			</div>
 		</header>
 		<div id="content">
 
 			<?php
-			if ((isset($_SESSION['dialogTitle']) && trim($_SESSION['dialogTitle'])) || (isset($_SESSION['dialogText']) && trim($_SESSION['dialogText']))) {
-				// Ensure we don't have an undefined var
-				$_SESSION['dialogTitle'] .= '';
-				$_SESSION['dialogText'] .= '';
-				echo '<div id="messagebox" class="">';
-				if ($_SESSION['dialogTitle']) { echo '<strong>' . $_SESSION['dialogTitle'] . '</strong><br/>'; }
-				if ($_SESSION['dialogText']) { echo $_SESSION['dialogText']; }
-				echo '</div>';
-			}
-			unset($_SESSION['dialogTitle']);
-			unset($_SESSION['dialogText']);
+				if ((isset($_SESSION['dialogTitle']) && trim($_SESSION['dialogTitle'])) || (isset($_SESSION['dialogText']) && trim($_SESSION['dialogText']))) {
+					// Ensure we don't have an undefined var
+					$_SESSION['dialogTitle'] .= '';
+					$_SESSION['dialogText'] .= '';
+					echo '<div id="messagebox" class="">';
+					if ($_SESSION['dialogTitle']) { echo '<strong>' . $_SESSION['dialogTitle'] . '</strong><br/>'; }
+					if ($_SESSION['dialogText']) { echo $_SESSION['dialogText']; }
+					echo '</div>';
+				}
+				unset($_SESSION['dialogTitle']);
+				unset($_SESSION['dialogText']);
 			?>
