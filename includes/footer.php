@@ -12,8 +12,8 @@
 		<script src="//cdnjs.cloudflare.com/ajax/libs/datatables-fixedheader/2.1.0/FixedHeader.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/datatables-tabletools/2.1.5/js/TableTools.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/1.3.5/ZeroClipboard.min.js"></script>
-		<script src="//code.highcharts.com/3.0/highcharts.js"></script>
-		<script src="//code.highcharts.com/3.0/modules/exporting.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highcharts/3.0.10/highcharts.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highcharts/3.0.10/modules/exporting.js"></script>
 
 		<!--<script type="text/javascript" src="js/jquery-ui.js"></script>
 		<script type="text/javascript" src="js/jquery.ui.selectmenu.js"></script>
