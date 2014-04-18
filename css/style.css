@@ -1,10 +1,21 @@
 * {
 	margin: 0;
-	padding: 0;
+	/*padding: 0;*/
 	line-height: 1.4;
 	/*font-style: normal*/
 	font-weight: normal;
-	overflow: auto;
+	overflow: hidden;
+	zoom: 100%;
+}
+
+/*
+ * Firefox has mysterious extra space when using line-height,
+ * compared to IE and Chrome
+ */
+@-moz-document url-prefix() {
+	* {
+			line-height: 1.1;
+	}
 }
 
 html {
@@ -13,11 +24,12 @@ html {
 
 body {
 	background-color: #fff;
-	font: normal 100% Helvetica, Arial, sans-serif;
+	font: normal 16px Arial, sans-serif;
 	width: 65%;
 	min-width: 960px;
-	margin: 0px auto;
-	padding: 10px 15px;
+	margin: 10px auto;
+	padding: 15px;
+	border-radius: 10px;
 }
 
 header {
@@ -29,6 +41,13 @@ footer {
 	color: #888;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	zoom: 75%;
+	/* Firefox doesn't support zoom */
+	-moz-transform: scale(0.75);
+	-moz-transform-origin: 0 0;
+}
+
 a {
 	text-decoration: none;
 	color: #479;
@@ -38,15 +57,34 @@ a:hover, a img:hover {
 	opacity: 0.66;
 }
 
+a img {
+	border: none;
+}
+
 strong {
 	font-weight: bold;
 }
 
+#content {
+	margin: 10px;
+}
+
+#messagebox {
+	border: 1px solid #9af;
+	border-radius: 5px;
+	background-color: #bdf;
+	width: 80%;
+	margin: 15px;
+	padding: 10px;
+}
+
 .left {
 	float: left;
+	margin-right: 5px;
 }
 
 .right {
 	float: right;
+	margin-left: 5px;
 	text-align: right;
 }

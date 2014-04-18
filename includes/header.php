@@ -34,11 +34,11 @@
 		<header>
 			<a class="left" href="http://www.keene.edu"><img src="images/KSC-wordmark-150px.png" alt="Keene State College" /></a>
 			<div class="left">
-				<h2><a href="http://keene.edu/academics/library/">Wallace E. Mason Library</a></h2>
-				<h2 id="site_title" ><a href="/"><?php echo $site_title; ?></a></h2>
+				<h1><a href="http://keene.edu/academics/library/">Wallace E. Mason Library</a></h1>
+				<h1 id="site_title" ><a href="/"><?php echo $site_title; ?></a></h1>
 			</div>
 			<div class="right">
-				<h3><?php echo $page_title; ?></h3>
+				<h2><?php echo $page_title; ?></h2>
 				<?php
 					if($site_uses_auth) {
 						echo '<div>You are logged in as <strong>'.$_SESSION['userName'].'</strong>.</div>';
