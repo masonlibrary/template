@@ -12,19 +12,20 @@
 	if ($_POST) {
 
 		$row = array();
-		$stmt = mysqli_prepare($dbc, 'select userID, userName, userPass, userEmail from users where userName=?');
+		$stmt = mysqli_prepare($dbc, 'select userID, userName, userPass, userEmail, userClass from users where userName=?');
 		mysqli_bind_param($stmt, 's', $_POST['username']);
 		mysqli_stmt_execute($stmt) or die('Failed to look up user: ' . mysqli_error($dbc));
 		mysqli_stmt_store_result($stmt);
-		mysqli_stmt_bind_result($stmt, $row['userID'], $row['userName'], $row['userPass'], $row['userEmail']);
+		mysqli_stmt_bind_result($stmt, $row['userID'], $row['userName'], $row['userPass'], $row['userEmail'], $row['userClass']);
 		mysqli_stmt_fetch($stmt);
 
 		if (mysqli_stmt_num_rows($stmt) == 1 && password_verify($_POST['password'], $row['userPass'])) {
 
-			// The log-in is OK so set the user ID and username session vars (and cookies), and redirect to the home page
+			// The log-in is OK so set the session vars, and redirect to the home page
 			$_SESSION['userID'] = $row['userID'];
 			$_SESSION['userName'] = $row['userName'];
 			$_SESSION['userEmail'] = $row['userEmail'];
+			$_SESSION['userClass'] = $row['userClass'];
 
 			header('Location: ' . $site_base_url);
 
