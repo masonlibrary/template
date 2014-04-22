@@ -1,9 +1,9 @@
 <?php
 
 	$page_title = 'Log in';
-	include('includes/header.php');
-	include('includes/connection.php');
-	include('includes/password.php');
+	require_once 'includes/header.php';
+	require_once 'includes/connection.php';
+	require_once 'includes/password.php';
 
 	if (!$site_uses_auth) {
 		header('Location: ' . $site_base_url);
@@ -54,5 +54,5 @@
 </form>
 
 <?php
-	include('includes/footer.php');
+	require_once 'includes/footer.php';
 ?>

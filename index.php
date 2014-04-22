@@ -1,10 +1,10 @@
 <?php
 	$page_title = 'test';
-	include('includes/header.php');
+	require_once 'includes/header.php';
 ?>
 
 test page
 
 <?php
-	include('includes/footer.php');
+	require_once 'includes/footer.php';
 ?>

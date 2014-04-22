@@ -1,6 +1,6 @@
 <?php
 
-	include('includes/header.php');
+	require_once 'includes/header.php';
 
 	$_SESSION = array();
 	session_destroy();
