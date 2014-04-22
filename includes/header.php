@@ -1,8 +1,6 @@
 <?php
 	require_once 'includes/config.php';
-
-	session_name(preg_replace('/[^A-Za-z0-9]/', '', $site_title)); // only alphanumeric characters allowed
-	session_start();
+	require_once 'includes/session.php';
 
 	// Don't redirect-loop if we end with '/login.php'. Credit: http://stackoverflow.com/a/834355/217374
 	if ($site_uses_auth && !isset($_SESSION['userID']) && !(substr($_SERVER['SCRIPT_NAME'], -strlen('/login.php'))==='/login.php')) {
