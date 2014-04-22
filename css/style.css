@@ -20,6 +20,7 @@
 
 html {
 	background-color: #ccc;
+	overflow: auto;
 }
 
 body {
@@ -87,4 +88,9 @@ strong {
 	float: right;
 	margin-left: 5px;
 	text-align: right;
+}
+
+/* Override JQuery UI's oversize widgets */
+.ui-widget {
+	font-size: inherit !important;
 }
