@@ -14,7 +14,7 @@
  */
 @-moz-document url-prefix() {
 	* {
-			line-height: 1.1;
+			line-height: 1.15;
 	}
 }
 
@@ -54,12 +54,17 @@ a {
 	color: #479;
 }
 
-a:hover, a img:hover {
-	opacity: 0.66;
+/* Because IE likes to make the site title disappear */
+a:hover {
+	color: #83A5BC;
 }
 
-a img {
+a * {
 	border: none;
+}
+
+a *:hover {
+	opacity: 0.66;
 }
 
 strong {
