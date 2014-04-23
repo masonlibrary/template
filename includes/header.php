@@ -44,6 +44,45 @@
 					}
 				?>
 			</div>
+			<table id="menu">
+				<tr>
+					<td>
+						<ul>
+							<li>test</li>
+							<li>test</li>
+							<li>test</li>
+						</ul>
+					</td>
+					<td>
+						<ul>
+							<li>test2</li>
+							<li>test2</li>
+							<li>test2</li>
+						</ul>
+					</td>
+					<td>
+						<ul>
+							<li>test3</li>
+							<li>test3</li>
+							<li>test3</li>
+						</ul>
+					</td>
+					<td>
+						<ul>
+							<li>test4</li>
+							<li>test4</li>
+							<li>test4</li>
+						</ul>
+					</td>
+					<td>
+						<ul>
+							<li>test5</li>
+							<li>test5</li>
+							<li>test5</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
 		</header>
 		<div id="content">
 

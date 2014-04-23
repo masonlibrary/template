@@ -74,6 +74,22 @@ strong {
 	margin: 10px;
 }
 
+#menu {
+	width: 100%;
+	padding: 0;
+	border: 1px solid green;
+}
+
+#menu ul {
+	padding: 0;
+	border: 1px solid blue;
+}
+
+#menu ul li {
+	padding: 5px;
+	border: 1px solid red;
+}
+
 #messagebox {
 	border: 1px solid #9af;
 	border-radius: 5px;
