@@ -11,10 +11,12 @@
 /*
  * Firefox has mysterious extra space when using line-height,
  * compared to IE and Chrome
+ *
+ * Seems to be fixed by removing heading zoom rule, let's wait and see
  */
 @-moz-document url-prefix() {
 	* {
-			line-height: 1.15;
+			/*line-height: 1.15;*/
 	}
 }
 
@@ -42,12 +44,9 @@ footer {
 	color: #888;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	zoom: 75%;
-	/* Firefox doesn't support zoom */
-	-moz-transform: scale(0.75);
-	-moz-transform-origin: 0 0;
-}
+h1 { font-size: 1.5em; }
+h2 { font-size: 1.125em; }
+h3 { font-size: 1em; }
 
 a {
 	text-decoration: none;
