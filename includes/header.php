@@ -44,45 +44,43 @@
 					}
 				?>
 			</div>
-			<table id="menu">
-				<tr>
-					<td>
+			<div id="menu">
+					<div>
 						<ul>
-							<li>test</li>
-							<li>test</li>
-							<li>test</li>
+							<li><h1>test</h1></li>
+							<li><a href="#">test</a></li>
+							<li><a href="#">test</a></li>
 						</ul>
-					</td>
-					<td>
+					</div>
+					<div>
 						<ul>
 							<li>test2</li>
 							<li>test2</li>
 							<li>test2</li>
 						</ul>
-					</td>
-					<td>
+					</div>
+					<div>
 						<ul>
 							<li>test3</li>
 							<li>test3</li>
 							<li>test3</li>
 						</ul>
-					</td>
-					<td>
+					</div>
+					<div>
 						<ul>
 							<li>test4</li>
 							<li>test4</li>
 							<li>test4</li>
 						</ul>
-					</td>
-					<td>
+					</div>
+					<div>
 						<ul>
 							<li>test5</li>
 							<li>test5</li>
 							<li>test5</li>
 						</ul>
-					</td>
-				</tr>
-			</table>
+					</div>
+			</div>
 		</header>
 		<div id="content">
 

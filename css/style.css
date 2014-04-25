@@ -75,19 +75,32 @@ strong {
 }
 
 #menu {
+	display: table;
+	table-layout: fixed;
 	width: 100%;
-	padding: 0;
-	border: 1px solid green;
+	float: left;
+	margin: 5px 0;
+	padding: 5px 0;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	font-size: 80%;
+}
+
+#menu > div {
+	display: table-cell;
+	width: 2%;
+}
+
+#menu > div + div {
+	border-left: 1px dotted #ccc;
 }
 
 #menu ul {
-	padding: 0;
-	border: 1px solid blue;
+	padding: 0 10px;
 }
 
 #menu ul li {
 	padding: 5px;
-	border: 1px solid red;
 }
 
 #messagebox {
