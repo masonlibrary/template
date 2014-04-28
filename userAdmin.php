@@ -23,7 +23,8 @@
 	$query = 'select userID, userName, userEmail, userClass from users u';
 	$result = mysqli_query($dbc, $query) or die('Error querying for users: ' . mysqli_error($dbc));
 
-	?>
+?>
+
 	<a href="userAdd.php">Add new user</a>
 	<form method="post">
 		<label for="class">Bulk class change</label>
@@ -36,7 +37,9 @@
 			<th>Email</th>
 			<th></th>
 		</tr></thead><tbody>
-	<?php
+
+<?php
+
 	while ($row = mysqli_fetch_assoc($result)) {
 		echo '<tr>
 				<td><input type="checkbox" name="userIDs[]" id="userID'.$row['userID'].'" value="'.$row['userID'].'"/></td>
@@ -51,5 +54,6 @@
 	$jsOutput .= '$("#class").spinner();';
 	$jsOutput .= '$(document).ready( function(){$("#userlist").dataTable();} );';
 
-	include("includes/footer.php");
+	require_once 'includes/footer.php';
+
 ?>
