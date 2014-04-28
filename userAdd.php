@@ -37,8 +37,7 @@
 
 ?>
 
-<h1>Add user</h1>
-	<form method="post">
+<form method="post">
 	<table>
 		<tr>
 			<th>Account information</th>

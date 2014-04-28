@@ -83,7 +83,7 @@ strong {
 	padding: 5px 0;
 	border-top: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
-	font-size: 80%;
+	font-size: 90%;
 }
 
 #menu > div {
@@ -100,7 +100,7 @@ strong {
 }
 
 #menu ul li {
-	padding: 5px;
+	padding: 2px;
 }
 
 #messagebox {

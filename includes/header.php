@@ -4,7 +4,7 @@
 
 	// Don't redirect-loop if we end with '/login.php'. Credit: http://stackoverflow.com/a/834355/217374
 	if ($site_uses_auth && !isset($_SESSION['userID']) && !(substr($_SERVER['SCRIPT_NAME'], -strlen('/login.php'))==='/login.php')) {
-		header("Location: login.php");
+		header('Location: login.php');
 		exit('Not logged in');
 	}
 
@@ -33,7 +33,7 @@
 			<a class="left" href="http://www.keene.edu"><img src="images/KSC-wordmark-150px.png" alt="Keene State College" /></a>
 			<div class="left">
 				<h1><a href="http://keene.edu/academics/library/">Wallace E. Mason Library</a></h1>
-				<h1 id="site_title" ><a href="/"><?php echo $site_title; ?></a></h1>
+				<h1 id="site_title" ><?php echo '<a href="'.$site_base_url.'">'.$site_title.'</a>'; ?></h1>
 			</div>
 			<div class="right">
 				<h2><?php echo $page_title; ?></h2>
@@ -47,7 +47,7 @@
 			<div id="menu">
 					<div>
 						<ul>
-							<li><h1>test</h1></li>
+							<li><strong>test</strong></li>
 							<li><a href="#">test</a></li>
 							<li><a href="#">test</a></li>
 						</ul>
@@ -75,8 +75,8 @@
 					</div>
 					<div>
 						<ul>
-							<li>test5</li>
-							<li>test5</li>
+							<li><strong>Admin</strong></li>
+							<li><a href="userAdmin.php">Manage users</a></li>
 							<li>test5</li>
 						</ul>
 					</div>
@@ -93,4 +93,6 @@
 				}
 				unset($_SESSION['dialogTitle']);
 				unset($_SESSION['dialogText']);
+
+				echo '<h1>'.$page_title.'</h1>';
 			?>

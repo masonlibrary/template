@@ -64,7 +64,7 @@
 		}
 	}
 
-	$page_title = $row['userName'] . ' - User edit';
+	$page_title = 'Edit user ' . $row['userName'];
 	require_once 'includes/header.php';
 
 	// reuse $userDataStmt from above
@@ -74,8 +74,7 @@
 	mysqli_stmt_fetch($userDataStmt);
 	mysqli_stmt_free_result($userDataStmt);
 
-	echo '<h1>Edit user '.$row['userName'].'</h1>
-		<form method="post">
+	echo '<form method="post">
 		<table>
 			<tr><th>Account information</th><td></td></tr>
 			<tr><th><label for="username">Username</label></th><td><input id="username" name="username" type="text" disabled="disabled" value="'.$row['userName'].'"/></td></tr>
