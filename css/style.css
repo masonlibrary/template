@@ -74,12 +74,19 @@ strong {
 	margin: 10px;
 }
 
+#menu-wrap {
+	float:left;
+	width:100%;
+	border-top:1px solid #ccc;
+	margin: 5px 0;
+}
+
 #menu {
 	display: table;
 	table-layout: fixed;
 	width: 100%;
 	float: left;
-	margin: 5px 0;
+	/*margin: 5px 0;*/
 	padding: 5px 0;
 	border-top: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
@@ -101,6 +108,30 @@ strong {
 
 #menu ul li {
 	padding: 2px;
+}
+
+#tab {
+	color:white;
+	line-height: normal;
+	background-color: #e13;
+	float: right;
+	font-size: 125%;
+	border-radius: 16px;
+	border: 4px solid #e13;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+#tab > div {
+	line-height: normal;
+	font-size: 125%;
+	padding: 0px 8px 5px;
+	border-radius: 12px;
+	border-bottom: 8px solid white;
+}
+
+#tab > div:hover {
+	opacity:1;
 }
 
 #messagebox {

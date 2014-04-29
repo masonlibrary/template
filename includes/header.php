@@ -10,7 +10,7 @@
 
 	// Initialize for inclusion of JavaScript snippets, will be included in
 	// footer after loading of all JS libraries
-	$jsOutput = '';
+	$jsOutput = '$("#tab").click(function(){$("#menu").toggle("blind", {direction: "up"})});';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,7 +44,7 @@
 					}
 				?>
 			</div>
-			<div id="menu">
+				<div id="menu">
 					<div>
 						<ul>
 							<li><strong>test</strong></li>
@@ -80,8 +80,11 @@
 							<li>test5</li>
 						</ul>
 					</div>
+				</div>
 			</div>
+			
 		</header>
+		<a><div id="tab"><div>menu</div></div></a>
 		<div id="content">
 
 			<?php
@@ -95,4 +98,5 @@
 				unset($_SESSION['dialogText']);
 
 				echo '<h1>'.$page_title.'</h1>';
+
 			?>
