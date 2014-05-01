@@ -13,7 +13,6 @@
 	$jsOutput = '';
 	$jsOutput .= '$("#tab").click(function(){
 			$("#menu").toggle("blind", {direction: "up"});
-			$("#tab-arrow").toggleClass("rotate");
 		});';
 ?>
 <!DOCTYPE html>
@@ -48,47 +47,51 @@
 					}
 				?>
 			</div>
-				<div id="menu">
-					<div>
-						<ul>
-							<li><strong>test</strong></li>
-							<li><a href="#">test</a></li>
-							<li><a href="#">test</a></li>
-						</ul>
-					</div>
-					<div>
-						<ul>
-							<li>test2</li>
-							<li>test2</li>
-							<li>test2</li>
-						</ul>
-					</div>
-					<div>
-						<ul>
-							<li>test3</li>
-							<li>test3</li>
-							<li>test3</li>
-						</ul>
-					</div>
-					<div>
-						<ul>
-							<li>test4</li>
-							<li>test4</li>
-							<li>test4</li>
-						</ul>
-					</div>
-					<div>
-						<ul>
-							<li><strong>Admin</strong></li>
-							<li><a href="userAdmin.php">Manage users</a></li>
-							<li>test5</li>
-						</ul>
-					</div>
+			<?php
+				if ($site_collapsible_menu) {
+					echo '<div id="menu" style="display: none;">';
+				} else {
+					echo '<div id="menu">';
+				}
+			?>
+				<div>
+					<ul>
+						<li><strong>test</strong></li>
+						<li><a href="#">test</a></li>
+						<li><a href="#">test</a></li>
+					</ul>
 				</div>
-			</div>
-			
+				<div>
+					<ul>
+						<li>test2</li>
+						<li>test2</li>
+						<li>test2</li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li>test3</li>
+						<li>test3</li>
+						<li>test3</li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li>test4</li>
+						<li>test4</li>
+						<li>test4</li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li><strong>Admin</strong></li>
+						<li><a href="userAdmin.php">Manage users</a></li>
+						<li>test5</li>
+					</ul>
+				</div>
+			</div> <!-- menu -->
 		</header>
-		<a id="tab"><div><div>menu&nbsp;</div><div id="tab-arrow">&#9662;</div></div></a>
+		<?php if ($site_collapsible_menu) { echo '<a id="tab"><div>menu</div></a>'; } ?>
 		<div id="content">
 
 			<?php

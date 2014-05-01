@@ -1,23 +1,9 @@
 * {
 	margin: 0;
-	/*padding: 0;*/
 	line-height: 1.4;
-	/*font-style: normal*/
 	font-weight: normal;
 	overflow: hidden;
 	zoom: 100%;
-}
-
-/*
- * Firefox has mysterious extra space when using line-height,
- * compared to IE and Chrome
- *
- * Seems to be fixed by removing heading zoom rule, let's wait and see
- */
-@-moz-document url-prefix() {
-	* {
-			/*line-height: 1.15;*/
-	}
 }
 
 html {
@@ -49,21 +35,17 @@ h2 { font-size: 1.125em; }
 h3 { font-size: 1em; }
 
 a {
+	cursor: pointer;
 	text-decoration: none;
 	color: #479;
 }
 
-/* Because IE likes to make the site title disappear */
 a:hover {
-	color: #83A5BC;
+	opacity: 0.66;
 }
 
 a * {
 	border: none;
-}
-
-a *:hover {
-	opacity: 0.66;
 }
 
 strong {
@@ -75,9 +57,9 @@ strong {
 }
 
 #menu-wrap {
-	float:left;
-	width:100%;
-	border-top:1px solid #ccc;
+	float: left;
+	width: 100%;
+	border-top: 1px solid #ccc;
 	margin: 5px 0;
 }
 
@@ -86,10 +68,8 @@ strong {
 	table-layout: fixed;
 	width: 100%;
 	float: left;
-	/*margin: 5px 0;*/
 	padding: 5px 0;
 	border-top: 1px solid #ccc;
-	/*border-bottom: 1px solid #ccc;*/
 	font-size: 90%;
 }
 
@@ -111,7 +91,7 @@ strong {
 }
 
 #tab {
-	color:white;
+	color: #fff;
 	line-height: normal;
 	background-color: #e13;
 	float: right;
@@ -126,17 +106,7 @@ strong {
 	padding: 0px 8px 5px;
 	border-radius: 12px;
 	border-bottom: 8px solid white;
-}
-
-#tab > div:hover {
-	opacity:1;
-}
-
-#tab div, #tab-arrow {
-	float:left;
-	-webkit-transition: -webkit-transform 0.4s ease;
-	-moz-transition: -webkit-transform 0.4s ease;
-	transition: -webkit-transform 0.4s ease;
+	opacity: 1;
 }
 
 #messagebox {
@@ -157,12 +127,6 @@ strong {
 	float: right;
 	margin-left: 5px;
 	text-align: right;
-}
-
-.rotate {
-	-webkit-transform: rotate(180deg);
-	-moz-transform: rotate(180deg);
-	transform: rotate(180deg);
 }
 
 /* Override JQuery UI's oversize widgets */
