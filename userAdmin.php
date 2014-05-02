@@ -4,8 +4,8 @@
 	require_once 'includes/connection.php';
 
 	if (!$site_uses_auth) { header('Location: ' . $site_base_url); }
-	if (!isset($_SESSION['userID'])) { header('Location: ' . $site_base_url); exit('Not logged in'); }
-	if ($_SESSION['userClass'] > 0) { header('HTTP/1.0 403 Forbidden'); die('Unauthorized'); } // Only let admins add users
+	if (!isset($_SESSION['userID'])) { header('Location: login.php?from=' . rawurlencode($_SERVER['REQUEST_URI'])); exit('Not logged in'); }
+	if ($_SESSION['userClass'] > 0) { header('HTTP/1.1 401 Unauthorized'); die('Unauthorized'); } // Only let admins add users
 
 	$page_title = 'User administration';
 	require_once 'includes/header.php';

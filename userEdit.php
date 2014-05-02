@@ -5,7 +5,7 @@
 	require_once 'includes/password.php';
 
 	if (!$site_uses_auth) { header('Location: ' . $site_base_url); }
-	if (!isset($_SESSION['userID'])) { header('Location: ' . $site_base_url); exit("Not logged in"); }
+	if (!isset($_SESSION['userID'])) { header('Location: login.php?from=' . rawurlencode($_SERVER['REQUEST_URI'])); exit("Not logged in"); }
 
 	// No user means we load the logged-in user
 	if (isset($_GET['userID'])) {
