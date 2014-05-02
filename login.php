@@ -27,7 +27,17 @@
 			$_SESSION['userEmail'] = $row['userEmail'];
 			$_SESSION['userClass'] = $row['userClass'];
 
-			header('Location: ' . $site_base_url);
+			if (isset($_GET['from']) && $_GET['from']) {
+				// Prevent someone from passing '?from=http://example.com/malicious-script.php'
+				// by removing $site_base_url from the beginning, if applicable, then re-adding it.
+				// Note that we use matching curly brackets as delimiters, not slashes.
+				// preg_quote() is also used to ensure we're not passing PCRE special chars unescaped.
+				$from = $site_base_url . preg_replace('{^'.preg_quote($site_base_url).'}', '', $_GET['from']);
+			} else {
+				$from = $site_base_url;
+			}
+
+			header('Location: ' . $from);
 
 		} else {
 

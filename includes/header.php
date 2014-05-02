@@ -4,7 +4,7 @@
 
 	// Don't redirect-loop if we end with '/login.php'. Credit: http://stackoverflow.com/a/834355/217374
 	if ($site_uses_auth && !isset($_SESSION['userID']) && !(substr($_SERVER['SCRIPT_NAME'], -strlen('/login.php'))==='/login.php')) {
-		header('Location: login.php');
+		header('Location: login.php?from=' . rawurlencode($_SERVER['REQUEST_URI']));
 		exit('Not logged in');
 	}
 
