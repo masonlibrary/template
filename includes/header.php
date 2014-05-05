@@ -13,7 +13,11 @@
 	$jsOutput = '';
 	$jsOutput .= '$("#tab").click(function(){
 			$("#menu").toggle("blind", {direction: "up"});
-		});';
+		});
+		$("#messagebox-close").click(function(){
+			$("#messagebox").hide("blind", {direction:"up"});
+		})
+		';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -99,6 +103,7 @@
 					echo '<div id="messagebox" class="">';
 						if (isset($_SESSION['dialogTitle'])) { echo '<strong>' . $_SESSION['dialogTitle'] . '</strong><br/>'; }
 						if (isset($_SESSION['dialogText'])) { echo $_SESSION['dialogText']; }
+						echo '<a id="messagebox-close" class="right">&#10006;</a>';
 					echo '</div>';
 				}
 				unset($_SESSION['dialogTitle']);
