@@ -14,6 +14,7 @@
 		<script src="//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/1.3.5/ZeroClipboard.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/highcharts/3.0.10/highcharts.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/highcharts/3.0.10/modules/exporting.js"></script>
+		<?php echo '<script src="'.$site_base_url.'js/script.js"></script>'; ?>
 
 		<!--<script type="text/javascript" src="js/jquery-ui.js"></script>
 		<script type="text/javascript" src="js/jquery.ui.selectmenu.js"></script>

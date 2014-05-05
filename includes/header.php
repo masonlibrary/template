@@ -11,13 +11,6 @@
 	// Initialize for inclusion of JavaScript snippets, will be included in
 	// footer after loading of all JS libraries
 	$jsOutput = '';
-	$jsOutput .= '$("#tab").click(function(){
-			$("#menu").toggle("blind", {direction: "up"});
-		});
-		$("#messagebox-close").click(function(){
-			$("#messagebox").hide("blind", {direction:"up"});
-		})
-		';
 ?>
 <!DOCTYPE html>
 <html lang="en">
