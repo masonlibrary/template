@@ -4,4 +4,4 @@ $("#tab").click(function(){
 
 $("#messagebox-close").click(function(){
 	$("#messagebox").hide("blind", {direction: "up"});
-})
+});
