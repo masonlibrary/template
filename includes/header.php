@@ -45,7 +45,7 @@
 				?>
 			</div>
 			<?php
-				if ($site_collapsible_menu) {
+				if (!$site_uses_menu || $site_collapsible_menu) {
 					echo '<div id="menu" style="display: none;">';
 				} else {
 					echo '<div id="menu">';
@@ -88,7 +88,7 @@
 				</div>
 			</div> <!-- menu -->
 		</header>
-		<?php if ($site_collapsible_menu) { echo '<a id="tab"><div>menu</div></a>'; } ?>
+		<?php if ($site_uses_menu && $site_collapsible_menu) { echo '<a id="tab"><div>menu</div></a>'; } ?>
 		<div id="content">
 
 			<?php
