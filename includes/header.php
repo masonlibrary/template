@@ -92,7 +92,7 @@
 		<div id="content">
 
 			<?php
-				if (isset($_SESSION['dialogTitle']) || isset($_SESSION['dialogText'])) {
+				if ((isset($_SESSION['dialogTitle']) && $_SESSION['dialogTitle']) || (isset($_SESSION['dialogText']) && $_SESSION['dialogText'])) {
 					echo '<div id="messagebox" class="">';
 						echo '<a id="messagebox-close" class="right">&#10006;</a>';
 						if (isset($_SESSION['dialogTitle'])) { echo '<strong>' . $_SESSION['dialogTitle'] . '</strong><br/>'; }
