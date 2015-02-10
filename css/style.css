@@ -34,6 +34,10 @@ h1 { font-size: 1.5em; }
 h2 { font-size: 1.125em; }
 h3 { font-size: 1em; }
 
+ol > li, ul > li {
+	overflow: initial;
+}
+
 a {
 	cursor: pointer;
 	text-decoration: none;
@@ -116,6 +120,7 @@ strong {
 	width: 80%;
 	margin: 15px;
 	padding: 10px;
+	white-space: pre-line;
 }
 
 #messagebox-close {
